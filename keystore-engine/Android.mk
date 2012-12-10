@@ -27,14 +27,13 @@ LOCAL_SRC_FILES := eng_keystore.cpp
 LOCAL_CFLAGS := -fvisibility=hidden -Wall -Werror
 
 LOCAL_C_INCLUDES += \
+	system/security/keystore \
 	external/openssl/include
 
 LOCAL_SHARED_LIBRARIES += \
 	libcrypto \
 	liblog \
 	libcutils \
-	libutils \
-	libbinder \
-	libkeystore_binder
+	libkeystore_client
 
 include $(BUILD_SHARED_LIBRARY)
